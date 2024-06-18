@@ -1,19 +1,18 @@
-# bfsops
+Done
+For further reference, you can check the code [HERE](https://github.com/asadsaves/asad-go-lang.
+).
 The background management interface of BFS.
 
-## 初始化流程(请参照test/ops_initialization.py)：
+Initialization Process (please refer to test/ops_initialization.py):
+Step 1
+Start the store, directory, proxy, and pitchfork services. After starting the store, ZooKeeper should display store nodes under /rack.
 
-###step 1
-启动store、directory、proxy、pitchfork
-store启动后，zookeeper看到/rack 有store节点
+Step 2
+Call the space() function to initialize the store. Once this is complete, disk space will be allocated and the BFS storage directory will contain generated volume files.
 
-###step 2:
-调用space()函数，初始化store，调用完成后，磁盘空间会被分配；bfs存储目录看到生成的volume文件。
+Step 3
+Call the groups() function to group the stores. After this step, ZooKeeper should display group nodes under /group/.
 
-###step 3:
-调用groups()函数，store分组，调用完成后，zookeeper看到/group/ 有组节点
+Step 4
+Call the volumes() function to activate the volumes. Upon completion, ZooKeeper should display volume nodes under /volume/.
 
-###step 4:
-调用volumes()函数， 生效volume，调用完成后，zookeeper看到/volume/有volume节点
-
-### Done
