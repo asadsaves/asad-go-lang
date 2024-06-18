@@ -1,0 +1,2 @@
+# asad-go-lang
+This project focuses on creating a distributed file system specifically tailored for small file storage. The system is developed using Golang, leveraging its concurrency features to enhance performance and reliability.
